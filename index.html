@@ -30,9 +30,14 @@
 			}
 
 			table {
-				border-spacing: 0px 40px;
+				border-spacing: 0px 20px;
 				font-size: 30px;
 				width: 100%;
+			}
+
+			td {
+				border-bottom: 1px solid gray;
+				padding-bottom: 10px;
 			}
 
 			.event-feed {
@@ -41,6 +46,20 @@
 
 			.event {
 				padding: 10px;
+			}
+
+			.event.past {
+				opacity: 0.4;
+			}
+
+			.event .past {
+				display: none;
+				color: red;
+				font-size: 14px;
+			}
+
+			.event.past .past {
+				display: block;
 			}
 
 			.datetime div {
@@ -92,8 +111,11 @@
 			Events of Note
 		</h2>
 		<table id="event-feed">
-			<tr class="event">
+			<tr class="event past">
 				<td class="datetime">
+					<div class="past">
+						Past Event
+					</div>
 					<div class="day">
 						Sunday
 					</div>
@@ -143,7 +165,7 @@
 						<a href="http://redfuton.nyc">Red Futon</a> Interactive Experience
 					</div>
 					<div class="info">
-						Performance Artists, Dancers, and Visual Art.  Musical experiences curated by the Futon Crew.
+						Performance Artists, Dancers, and Visual Art.  Immersive musical experiences curated by the Futon Crew.
 					</div>
 					<a href="http://www.chinatownsoup.nyc/">
 						Chinatown Soup
@@ -172,7 +194,7 @@
 						<a href="http://redfuton.nyc">Red Futon</a> Live 
 					</div>
 					<div class="info">
-						Raw, throbbing improvised dance music.  How deep will you go?  <a href="http://www.ticketweb.com/t3/sale/SaleEventDetail?eventId=6596235&pl=pianosnyc&dispatch=loadSelectionData">Tickets</a>
+						Saxophones, Guitars, Keys, Loopers, Drum Machines.  How deep will you go?  <a href="http://www.ticketweb.com/t3/sale/SaleEventDetail?eventId=6596235&pl=pianosnyc&dispatch=loadSelectionData">Tickets</a>
 					</div>
 					<a href="http://www.pianosnyc.com/showroom/stewart-taylor-52516">
 						Pianos NYC
