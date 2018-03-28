@@ -1,0 +1,12 @@
+{
+  "name": "active-culture",
+  "description": "Active Culture: your source for Active Culture",
+  "version": "0.0.1",
+  "engines": {
+    "node": "6.9.0"
+  },
+  "scripts": {},
+  "dependencies": {
+    "snapsvg": "^0.5.1"
+  }
+}
