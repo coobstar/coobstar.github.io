@@ -1,0 +1,333 @@
+html, body {
+  font-family: serif;
+  font-size: 14px;
+  line-height: normal;
+}
+body {
+  padding: 20px;
+  /*background: -webkit-gradient(50%, left top, left bottom, from(#fff), to(#cbccc8)) fixed;*/
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(255, 255, 255)), to(rgb(0, 0, 0)));
+  /*background: lightgrey;*/
+  background: white;
+}
+
+
+a { color: hsl(228, 63%, 49%); }
+a:hover {
+  color: hsl(217, 59%, 48%);
+  font-style: italic;
+}
+
+h1 {
+  font-weight: lighter;
+  font-family:serif;
+}
+
+
+.content {
+  margin: 0 auto;
+  /*max-width: 800px;*/
+}
+
+.home {
+  text-align: center;
+}
+.home h1 {
+  margin-bottom: 32px;
+}
+
+.search-box-wrapper {
+  border: 3px solid #4a90e2;
+  border: 2px solid black;
+  max-width: 420px;
+  margin: 0 auto 32px auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center; /* TODO prefix */
+  flex-direction: row;
+
+  position: fixed;
+  top: 80px;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 10px 5px 5px #dadada;
+  padding-right:8px;
+
+}
+.search-icon { padding: 10px; }
+.search-input-wrapper {
+  flex: 1;
+}
+.search-input {
+  width: 100%;
+  border: none;
+  font-size: 28px;
+  outline: none;
+  text-align: left;
+  font-weight: lighter;
+  padding: 4px 4px 4px 10px;
+  box-sizing: border-box;
+  /*margin-bottom: 16px;*/
+}
+.search-img-wrapper img {
+  cursor: pointer;
+  width: 100px;
+  height: 22px;
+}
+
+/** stamp sits below search to not put gifs under search */
+.stamp {
+  width: 460px;
+  height: 80px;
+  width: 100%;
+  /*background-color: red;*/
+}
+
+.loader {
+  text-align:center;
+  margin: 100px 32px 32px 32px;
+}
+.results-wrapper .loader {
+  margin: 32px;
+  top: 100px;
+  position: relative;
+}
+
+.VisibilitySensor {
+  height: 100px;
+}
+
+.title-text-wrapper {
+  position:relative;
+  top: -5px;
+  left: 20px;
+  font-family: "Comic Sans MS", cursive, serif;
+  font-weight: bold;
+  font-size: 1.45em;
+}
+
+.floating-link {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-size:30px;
+  font-weight: bold;
+  color: black;
+  letter-spacing: 2px;
+  font-style: italic;
+  z-index: 99999;
+  cursor:pointer;
+  transition: transform 2s;
+}
+.floating-link:hover {
+  transform: scale(1.5);
+}
+.live-h1 {
+  position: fixed;
+  top: 40px;
+}
+.logo {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.ia-logo img {
+  position: relative;
+  top: 10px;
+  margin: 0;
+  background: white;
+}
+.ia-logo span { background: white; padding: 0 5px; }
+.ia-logo a { color: black; text-decoration: none; }
+.ia-logo a:hover { font-style: initial; }
+.header {
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  padding: 0 0 10px 0;
+  z-index: 9999;
+  height: 50px;
+}
+.header .links {
+  display: inline-block;
+  padding: 24px 8px 10px 10px;
+  background-color: white;
+  font-size: 1.5em;
+}
+.header .links a {
+  margin-right: 10px;
+  letter-spacing: 1px;
+  text-decoration:none;
+  color: teal;
+}
+.header .links a:hover {
+  font-style: italic;
+}
+.about {
+  margin: 0 auto;
+  font-size: 22px;
+  line-height: 1.5em;
+  background-color: white;
+  margin-top: 45px;
+  padding: 15px 100px 15px 15px;
+
+}
+.home-text {
+  max-width: 1000px;
+  position: relative;
+  margin: 140px auto 20px auto;
+  font-size: 1.6em;
+}
+.home-text h1 {
+  line-height: normal;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: teal;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 4em;
+}
+.home-text h2 {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 1em;
+  color: #999;
+}
+.home-text img {
+  max-width: 100%;
+  height: auto;
+}
+.home-text p {
+  line-height: 1.5em;
+}
+.home-text .ia-img {
+  margin: 8px 3px 0px 3px;
+}
+.a-project-of {
+  font-size: .8em;
+}
+
+
+
+
+@media (max-width: 800px) {
+  body {
+    padding: 10px;
+  }
+  .search-box-wrapper {
+    max-width: initial;
+    margin-top: 10px;
+    width: 90%;
+    box-sizing: border-box;
+    top: 100px;
+  }
+  .content {
+    overflow: hidden;
+  }
+  .floating-link {
+    display: none;
+  }
+  .about {
+    font-size: 1.5em;
+    margin-top: 100px;
+    padding: 20px 15px 40px 15px;
+  }
+  .results-wrapper .loader {
+    top: 150px;
+    position: relative;
+  }
+  .home-text {
+    margin:180px auto 20px auto;
+  }
+  .home-text h1 {
+    line-height: normal;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 2.25em;
+  }
+  .home-text h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1em;
+
+  }
+  .header {
+    padding-top: 0;
+  }
+  .header .links {
+    width: 100%;
+    padding-right:10px;
+    padding-top: 8px;
+    display:flex;
+
+  }
+  .header .links a {
+    flex: 1;
+    text-align:center;
+  }
+  .header .links .donate {
+    /*float: right;*/
+    /*padding-right:10px;*/
+    /*font-size: 2em;*/
+  }
+  .ia-logo {
+    /*width: 50px;*/
+    /*height: 50px;*/
+    /*background-image: url(../assets/ia-logo.png);*/
+    /*background-size: cover;*/
+    font-size: 1.5em;
+    margin: 0 auto;
+    text-align: center;
+    background:white;
+    height: 60px;
+  }
+
+  .hashslash .ia-logo {
+    display: none;
+  }
+  .hashslash .search-box-wrapper {
+    top: 45px;
+  }
+  .hashslash .home-text {
+    margin-top: 120px;
+  }
+  /** stamp sits below search to not put gifs under search */
+  .stamp {
+    height: 120px;
+    width: 100%;
+    /*background-color: red;*/
+  }
+
+  .live-h1 {
+    top: 60px;
+    position: fixed;
+    font-size: 20px;
+    background:white;
+    z-index:999;
+    width:100%;
+  }
+}
+@media (min-width: 801px) {
+  .ia-logo {
+    /*width: 50px;*/
+    /*height: 50px;*/
+    /*background-image: url(../assets/ia-logo.png);*/
+    /*background-size: cover;*/
+    position: fixed;
+    font-size: 1.5em;
+    top: 8px;
+    left: 50%;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    transform: translateX(-50%);
+    background:white;
+    height: 60px;
+  }
+}

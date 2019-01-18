@@ -1,0 +1,84 @@
+h2 {
+    font-size: 40px;
+    margin: 20px;
+    font-weight: normal;
+    text-align: center;
+}
+
+table {
+  border-spacing: 0px 20px;
+  font-size: 24px;
+  width: 100%;
+}
+
+td {
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+}
+
+.event-feed {
+  padding: 10px;
+}
+
+.event {
+  padding: 10px;
+}
+
+#past-feed .event {
+  opacity: 0.4;
+}
+
+.event .past {
+  display: none;
+  color: red;
+  font-size: 14px;
+}
+
+#past-feed .event .past {
+  display: block;
+}
+
+.datetime div {
+  display: block;
+  width: 100%;
+    text-align: center;
+    font-size: 32px;
+}
+
+.datetime .date {
+  font-weight: bold;
+}
+
+.image img {
+  width: 180px;
+  padding-left: 20px;
+}
+
+.blurb {
+  padding-left: 20px;
+}
+
+.blurb .title {
+  font-size: 32px;
+  font-weight: bold;
+  padding: 10px 0px;
+}
+
+.blurb a {
+  color: blue;
+}
+
+.blurb > a {
+  text-decoration: none;
+  padding: 15px;
+  display: inline-block;
+}
+
+.blurb > a:before {
+  content: "@";
+}
+
+.construction {
+  margin-top: 10%;
+  text-align: center;
+}

@@ -1,6 +1,8 @@
 <html>
 	<head>
     <meta property="og:image" content="http://activeculture.nyc/img/logo.png"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -10,128 +12,216 @@
 		  ga('create', 'UA-77794708-1', 'auto');
 		  ga('send', 'pageview');
 
-      if (window.location.search === "?leftfield-nov-4") {
+      /*if (window.location.search === "?leftfield-nov-4") {
         window.location.href = "https://www.eventbrite.com/e/active-culture-presents-out-of-leftfield-ft-litkid-dj-coleslaw-tickets-29037107771"
-      }
-
-			/*
-			*
-			* picture of ulgy sweater by TheUglySweaterShop.com is licensed under CC BY 2.0
-			*/
+      }*/
 
 		</script>
 		<style>
 			body {
 				font-family: sans-serif;
 				background-color: rgba(145, 84, 214);
-				padding-top: 50px;
 				margin: 0px;
+				width: 100%;
+				height: 100%;
 			}
 
 			h1 {
 				font-size: 120px;
-				margin-bottom: 20px;
 				text-align: center;
         background-image: url(https://media.giphy.com/media/mUlLb3rnKptgQ/giphy.gif);
         background-size: contain;
         color: violet;
         text-shadow: 0px 0px 20px white;
+				margin-block-start: 0;
+		    padding-top: 20px;
+		    padding-bottom: 20px;
+		    margin-block-end: 0;
 			}
 
-			h2 {
-			    font-size: 40px;
-			    margin: 20px;
-			    font-weight: normal;
-			    text-align: center;
-			}
-
-			table {
-				border-spacing: 0px 20px;
-				font-size: 24px;
-				width: 100%;
-			}
-
-			td {
-				border-bottom: 1px solid gray;
-				padding-bottom: 10px;
-			}
-
-			.event-feed {
-				padding: 10px;
-			}
-
-			.event {
-				padding: 10px;
-			}
-
-			#past-feed .event {
-				opacity: 0.4;
-			}
-
-			.event .past {
-				display: none;
-				color: red;
-				font-size: 14px;
-			}
-
-			#past-feed .event .past {
-				display: block;
-			}
-
-			.datetime div {
-				display: block;
-				width: 100%;
-    			text-align: center;
-          font-size: 32px;
-			}
-
-			.datetime .date {
-				font-weight: bold;
-			}
-
-			.image img {
-				width: 180px;
-				padding-left: 20px;
-			}
-
-			.blurb {
-				padding-left: 20px;
-			}
-
-			.blurb .title {
-				font-size: 32px;
-				font-weight: bold;
-				padding: 10px 0px;
-			}
-
-			.blurb a {
-				color: blue;
-			}
-
-			.blurb > a {
+			h1 a {
+				color: rgba(145, 84, 214);
 				text-decoration: none;
-				padding: 15px;
+			}
+
+			.main {
+				display: -webkit-box;
+				display: -moz-box;
+				display: -ms-flexbox;
+				display: -moz-flex;
+				display: -webkit-flex;
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+			}
+
+			.nav {
+				align-items: center;
+				justify-content: center;
+
+				display: -webkit-box;
+			  display: -moz-box;
+			  display: -ms-flexbox;
+			  display: -moz-flex;
+			  display: -webkit-flex;
+			  display: flex;
+				flex-wrap: wrap;
+				-webkit-flex-wrap: wrap;
+			}
+
+			.nav > div {
+				box-sizing: border-box;
+				padding:10px;
+				display: -webkit-box;
+			  display: -moz-box;
+			  display: -ms-flexbox;
+			  display: -moz-flex;
+			  display: -webkit-flex;
+			  display: flex;
+				flex-direction: column;
+			}
+
+			.nav > div > div {
+				cursor: pointer;
+				background: #545dd6;
+				display: block;
+				flex: 1;
+				text-align: center;
+				color: yellow;
+				font-size: 20px;
+			}
+
+			.nav > div > div > img {
+				width: 100%;
+				height: 65px;
+			}
+
+			.content {
+				text-align: center;
+				flex: 1;
+			}
+
+			.content img {
 				display: inline-block;
 			}
 
-			.blurb > a:before {
-				content: "@";
+			#construction {
+				margin-top: 50px;
+				width: 600px;
 			}
 
-			.construction {
-				margin-top: 10%;
+			#party {
+				width: 300px;
+			}
+
+			.footer {
 				text-align: center;
+				padding: 10px;
+				color: #d6d454;
+				font-size: 10px;
+			}
+
+			@media only screen and (max-device-width: 800px) {
+				h1 {
+					font-size: 90px;
+				}
+
+				.nav {
+					flex: 1;
+
+					width: 100%;
+				}
+
+				.nav > div {
+					width: 50%;
+				}
+
+				#construction {
+					margin-top: 30px;
+					width: 300px;
+				}
+
+				#party {
+					width: 150px;
+				}
 			}
 
 		</style>
 	</head>
 	<body>
-		<h1>
-			<a href="https://www.facebook.com/liveactiveculture">Active Culture</a>
-		</h1>
-		<div class="construction"><img src="img/1.gif"/></div>
-		<div class="sweater">
-			<img src=""/>
+		<div class="main">
+			<h1>
+				<a href="/">Active Culture</a>
+			</h1>
+			<div class="nav">
+			</div>
+			<div class="content">
+				<div id="home">
+					<img id="construction" src="img/1.gif"/>
+					<br/>
+					<img id="party" src="img/party.gif"/>
+				</div>
+			</div>
+			<div class="footer">
+				&copy; 2019 - Active Culture NYC
+			</div>
 		</div>
+		<script>
+			const navItems = [
+				{
+					title: "about",
+					image: "img/nav/about.gif",
+					id: "nav-item-about",
+					link: "/about.html"
+				},
+				{
+					title: "music",
+					image: "img/nav/music1.gif",
+					id: "nav-item-music",
+					link: "/music.html"
+				},
+				{
+					title: "events",
+					image: "img/nav/calenadr.gif",
+					id: "nav-item-events",
+					link: "/events.html"
+				},
+				{
+					title: "contact",
+					image: "img/nav/contact.gif",
+					id: "nav-item-contact",
+					link: "/contact.html"
+				}
+			];
+
+			const nav = document.querySelector(".nav");
+
+			createMenu(navItems);
+
+			function createMenu(items) {
+				for (item of items) {
+					let div = document.createElement('div');
+					div.className = "nav-item";
+					div.id = item.id;
+					div.innerHTML = createMenuItem(item);
+					nav.appendChild(div);
+					div.onclick = function() {
+						console.log("HELLOOO");
+						window.location.href = item.link;
+					};
+				}
+			}
+
+			function createMenuItem(item) {
+				return `
+				 	<div>
+						<img src="${item.image}"/>
+						${item.title}
+					</div>
+				`;
+			}
+
+
+		</script>
 	</body>
 </html>
