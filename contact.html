@@ -1,1 +1,215 @@
-contact
+<html>
+  <head>
+    <meta property="og:image" content="http://activeculture.nyc/img/logo.png"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-77794708-1', 'auto');
+		  ga('send', 'pageview');
+
+      /*if (window.location.search === "?leftfield-nov-4") {
+        window.location.href = "https://www.eventbrite.com/e/active-culture-presents-out-of-leftfield-ft-litkid-dj-coleslaw-tickets-29037107771"
+      }*/
+
+		</script>
+		<style>
+      :root {
+				--spring-green: #99d654;
+				--ochre: #d6b354;
+				--raspberry: #d65499;
+				--purp: #9154d6;
+				--dusky: #545dd6;
+				--burnt-umber: #d67254;
+				--mustard: #d6d454;
+        --candy-apple: #d65458;
+        --seafoam: #54d6cb;
+			}
+
+			body {
+				font-family: sans-serif;
+				background-color: var(--burnt-umber);
+				margin: 0px;
+				width: 100%;
+				height: 100%;
+			}
+
+			h1 {
+				font-size: 120px;
+				text-align: center;
+        background-image: url(img/tranquil-scene.gif);
+        background-size: contain;
+        color: var(--ochre);
+        text-shadow: 0px 0px 20px var(--burnt-umber);
+				margin-block-start: 0;
+		    padding-top: 20px;
+		    padding-bottom: 20px;
+		    margin-block-end: 0;
+			}
+
+			h1 a {
+				color: var(--ochre);
+				text-decoration: none;
+			}
+
+			.main {
+				display: -webkit-box;
+				display: -moz-box;
+				display: -ms-flexbox;
+				display: -moz-flex;
+				display: -webkit-flex;
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+			}
+
+			.nav {
+				align-items: center;
+				justify-content: center;
+
+				display: -webkit-box;
+			  display: -moz-box;
+			  display: -ms-flexbox;
+			  display: -moz-flex;
+			  display: -webkit-flex;
+			  display: flex;
+				flex-wrap: wrap;
+				-webkit-flex-wrap: wrap;
+			}
+
+			.nav > div {
+				box-sizing: border-box;
+				padding:10px;
+				display: -webkit-box;
+			  display: -moz-box;
+			  display: -ms-flexbox;
+			  display: -moz-flex;
+			  display: -webkit-flex;
+			  display: flex;
+				flex-direction: column;
+			}
+
+			.nav > div > div {
+				cursor: pointer;
+				background: var(--ochre);
+				display: block;
+				flex: 1;
+				text-align: center;
+				color: yellow;
+				font-size: 20px;
+			}
+
+			.nav > div > div > img {
+				width: 100%;
+				height: 65px;
+			}
+
+      .content {
+        padding: 100px;
+        font-size: 30px;
+        color: white;
+        flex: 1;
+      }
+
+      .content a {
+        color: var(--candy-apple);
+      }
+
+			.footer {
+				text-align: center;
+				padding: 10px;
+				color: var(--mustard);
+				font-size: 10px;
+			}
+
+			@media only screen and (max-device-width: 800px) {
+				h1 {
+					font-size: 90px;
+				}
+
+				.nav {
+					flex: 1;
+
+					width: 100%;
+				}
+
+				.nav > div {
+					width: 50%;
+				}
+			}
+
+		</style>
+  </head>
+  <body>
+    <div class="main">
+			<h1>
+				<a href="/">Active Culture</a>
+			</h1>
+			<div class="nav">
+			</div>
+			<div class="content">
+        CONTACT INFO COMING SOON
+			</div>
+			<div class="footer">
+				&copy; 2019 - Active Culture NYC
+			</div>
+		</div>
+		<script>
+      const navItems = [
+				{
+					title: "about",
+					image: "img/nav/about.gif",
+					id: "nav-item-about",
+					link: "/about.html"
+				},
+				{
+					title: "music",
+					image: "img/nav/music1.gif",
+					id: "nav-item-music",
+					link: "https://soundcloud.com/activeculture"
+				},
+				{
+					title: "events",
+					image: "img/nav/calenadr.gif",
+					id: "nav-item-events",
+					link: "https://www.facebook.com/liveactiveculture"
+				},
+				{
+					title: "contact",
+					image: "img/nav/contact.gif",
+					id: "nav-item-contact",
+					link: "/contact.html"
+				}
+			];
+
+			function createMenuItem(item) {
+				let div = document.createElement('div');
+				div.className = "nav-item";
+				div.id = item.id;
+				div.innerHTML = `
+				 	<div>
+						<img src="${item.image}"/>
+						${item.title}
+					</div>
+				`;
+				nav.appendChild(div);
+				let link = item.link;
+				div.onclick = function() {
+					console.log("HELLOOO");
+					//scoping issue
+					window.location.href = link;
+				};
+			}
+
+			const nav = document.querySelector(".nav");
+
+			for (item of navItems) {
+				createMenuItem(item);
+			}
+		</script>
+  </body>
+</html>
