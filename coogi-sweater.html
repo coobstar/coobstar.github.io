@@ -92,6 +92,9 @@
     </style>
   </head>
   <body>
+    <audio loop id="audio">
+        <source src="audio/grotto-whisper.mp3">
+    </audio>
     <div id="menu" class="closed">
       <div id="menuButton"></div>
       <!--<div id="lights"></div>
@@ -99,6 +102,21 @@
     </div>
     <script>
       var menuItems = [{
+        name: "play",
+        images: ["img/play.svg", "img/pause.svg"],
+        state: 0,
+        callback: function(e, menu, item){
+          item.state = item.state === 0 ? 1 : 0;
+          e.target.style.backgroundImage = "url('" + item.images[item.state] + "')";
+          var audio = document.getElementById('audio');
+          if (!item.state) {
+            audio.pause();
+          } else {
+            audio.play();
+          }
+        },
+        image: "img/play.svg",
+      },{
         name: "lights",
         backgrounds: ["white", "black"],
         images: ["img/moon.svg", "img/sun.svg"],
